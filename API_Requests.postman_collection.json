@@ -1,0 +1,670 @@
+{
+	"info": {
+		"_postman_id": "4f3f6dad-00b1-44a9-9096-9ebc20cb396c",
+		"name": "API_Requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuario_Requests",
+			"item": [
+				{
+					"name": "1.crearUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Artiiiin\",\n    \"apellido\": \"Rios\",\n    \"email\": \"Artiiiin@gmail.com\",\n    \"password\": \"1234!\",\n    \"ciudad\": \"Resistencia\",\n    \"provincia\": \"Chaco\",\n    \"pais\": \"Argentina\" \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuario",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.obtenerUsuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuario/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3.obtenerUsuarioPorID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuario/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4.eliminarUsuarioPorID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuario/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "5.modificarUsuarioPorID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Lucas\",\n    \"apellido\": \"Rios\",\n    \"email\": \"xlmriosx@gmail.com\",\n    \"password\": \"1234!\",\n    \"ciudad\": \"Resistencia\",\n    \"provincia\": \"Chaco\",\n    \"pais\": \"Argentina\" \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuario/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "6.obtenerUsuariosDeCiudad",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuario/ciudad?ciudad=Corrientes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"ciudad"
+							],
+							"query": [
+								{
+									"key": "ciudad",
+									"value": "Corrientes"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "7.obtenerUsuariosResistencia",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuario/ciudad?ciudad=resistencia",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"ciudad"
+							],
+							"query": [
+								{
+									"key": "ciudad",
+									"value": "resistencia"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "8.obtenerUsuariosDespuesFecha",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuario/buscar/fechaDesde?fecha=09.09.2021",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"buscar",
+								"fechaDesde"
+							],
+							"query": [
+								{
+									"key": "fecha",
+									"value": "09.09.2021"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Producto_Requests",
+			"item": [
+				{
+					"name": "1.crearProducto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"gaseosa coco cola\",\n    \"descripcion\": \"101% azucar\",\n    \"precio_unitario\": 15.00,\n    \"contenido\": \"Tiene 6 salchichas\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/producto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.obtenerProductos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/producto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3.obtenerProductoPorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/producto/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"producto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4.eliminarProductoPorID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/producto/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"producto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "5.modificarProductoPorID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"salchipapa\",\n    \"descripcion\": \"Ricas con queso\",\n    \"precio_unitario\": 16.00,\n    \"contenido\": \"Tiene 6 salchichas\",\n    \"publicado\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/producto/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"producto",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "6.obtenerProductosConPalabra",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"salchipapa\",\n    \"descripcion\": \"Ricas con queso\",\n    \"precio_unitario\": 16.00,\n    \"contenido\": \"Tiene 6 salchichas\",\n    \"publicado\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/producto/buscarContiene?nombre=coca",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"producto",
+								"buscarContiene"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "coca"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "7.obtenerProductosNoPublicados",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"salchipapa\",\n    \"descripcion\": \"Ricas con queso\",\n    \"precio_unitario\": 16.00,\n    \"contenido\": \"Tiene 6 salchichas\",\n    \"publicado\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/producto/noPublicado",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"producto",
+								"noPublicado"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Carrito_Requests",
+			"item": [
+				{
+					"name": "1.crearCarrito",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"generado_por\":\"\",\n    \"total\":0.00\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuario/4/carrito",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"4",
+								"carrito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.obtenerCarritos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/carrito",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carrito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3.obtenerCarritosPorID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1,\n    \"usuario_id\":2,\n    \"fecha_creacion\":\"2021-09-09\",\n    \"generado_por\":\"Pagina web\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/carrito/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carrito",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4.eliminarCarritosPorID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1,\n    \"usuario_id\":2,\n    \"fecha_creacion\":\"2021-09-09\",\n    \"generado_por\":\"Pagina web\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/carrito/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carrito",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "5.crearProductoCarritoPorID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/carrito/17/producto/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carrito",
+								"17",
+								"producto",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "6.eliminarProductoCarritoPorID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/carrito/4/producto/2/baja",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carrito",
+								"4",
+								"producto",
+								"2",
+								"baja"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "7.sumarProductoCarritoPorID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/carrito/17/producto/4/suma",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carrito",
+								"17",
+								"producto",
+								"4",
+								"suma"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "8.restarProductoCarritoPorID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/carrito/4/producto/2/resta",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carrito",
+								"4",
+								"producto",
+								"2",
+								"resta"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orden_Requests",
+			"item": [
+				{
+					"name": "1.crearOrden",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"usuario_id\":4\n\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/orden/17",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orden",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.obtenerOrdenes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/orden/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orden",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
